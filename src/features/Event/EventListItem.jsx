@@ -20,8 +20,10 @@ export default function EventListItem({event})
             </Segment>
             <Segment>
                 <span>
-                    date<Icon name="clock"/>
-                    venue<Icon name="marker"/>
+                   
+                   <Icon name="clock" /> {event.date}
+                    <Icon name="marker"/> {event.venue}
+                   
                 </span>
             </Segment>
             <Segment secondary>

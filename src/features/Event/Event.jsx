@@ -6,6 +6,9 @@ import {sampleData} from './eventData';
 export default function Event({eventForm,setEventForm})
 {
     const[data,setData]=useState(sampleData);
+    function HandleCreateEvent(event) {
+        setData(...data,event)
+    }
     return(
     <Fragment>
     <Grid>
@@ -15,7 +18,7 @@ export default function Event({eventForm,setEventForm})
         <Grid.Column width={6}>
            {
                eventForm &&
-               <EventForm setEventForm={setEventForm}/>
+               <EventForm setEventForm={setEventForm} createEvent={HandleCreateEvent}/>
            };
             
         </Grid.Column>
